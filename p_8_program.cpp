@@ -5,7 +5,6 @@ int* printAray() {
     for(int i =0; i<5; i++) {
         cin >> aray[i];
     }
-    
     return aray;
 }
 int main() {
@@ -14,3 +13,5 @@ int main() {
         cout << A[i] << " " ;
     }
 }
+
+
