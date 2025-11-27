@@ -15,6 +15,8 @@ int main() {
     cout << s.at(4) << endl;
     cout << s.at(s.size()-1) << endl;
     s.clear();
-    cout << s.size();
+    cout << s.size() << endl;
+    s = "gello";
+    cout << s.empty() << endl;
     return 0;
 }
