@@ -7,18 +7,18 @@ class Student {
     int marks;
 };
 bool cmp(Student l, Student r) {
-    if(l.marks>r.marks) {
-        return true;
-    }else if(l.marks<r.marks) {
-        return false;
-    }else {
-        if(l.roll<r.roll) {
-            return true;
-        }else {
-            return false;
-        }
-    }
-    // return l.marks>r.marks ? true : l.roll<r.roll;
+    // if(l.marks>r.marks) {
+    //     return true;
+    // }else if(l.marks<r.marks) {
+    //     return false;
+    // }else {
+    //     if(l.roll<r.roll) {
+    //         return true;
+    //     }else {
+    //         return false;
+    //     }
+    // }
+    return l.marks>r.marks ? true : l.roll<r.roll;
 }
 int main() {
     int N;
