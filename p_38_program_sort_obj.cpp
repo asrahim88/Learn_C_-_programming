@@ -28,5 +28,7 @@ int main() {
     for(int i =0; i<N; i++) {
         cout << info[i].name << " " << info[i].roll << " " << info[i].section << " " << info[i].subject << " " << info[i].marks << endl;
     }
+
+    
     return 0;
 }
