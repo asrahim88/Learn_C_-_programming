@@ -4,7 +4,7 @@ int main() {
     // vector<int> v;
     // cout << v.size() << endl;
     // vector<int> v(10);
-    vector<int> v(10, -5);
+    // vector<int> v(10, -5);
     // for(int i=0; i<v.size(); i++) {
     //     cout << v[i] << endl;
     // }
@@ -14,6 +14,11 @@ int main() {
     // }
     // vector<int> v2 = {10,20,30,40,50,60};
     vector<int> v3 = {10,30,50};
-    cout << v3.size() << endl;
+    v3.resize(5);
+    for(int i =0; i<v3.size();i ++){
+        cout << v3[i] << endl;
+    }
+    v3.clear();
+
     return 0;
 }
