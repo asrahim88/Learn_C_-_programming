@@ -36,6 +36,7 @@ void insertAtTail(Node* head,Node* tail, int val){
 
     if(head == NULL){
         head = newNode;
+        tail = newNode;
         return;
     }
     tail->next = newNode;
