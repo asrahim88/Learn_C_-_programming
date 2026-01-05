@@ -60,11 +60,15 @@ int countNode(Node* head){
     }
     return count;
 }
-void deleteAtHead(Node* &head){
+void deleteAtHead(Node* &head, Node* &tail){
     Node* temp = head;
     head = temp->next;
-    head->prev = NULL;
     delete temp;
+    if(head == NULL){
+        tail = NULL;
+        return;
+    }
+    head->prev = NULL;
 }
 void forwardPrintNode(Node* head){
     Node* temp = head;
@@ -113,7 +117,7 @@ int main() {
         backwardPrintNode(tail);
     }
 
-    deleteAtHead(head);
+    deleteAtHead(head, tail);
     forwardPrintNode(head);
     backwardPrintNode(tail);
 
