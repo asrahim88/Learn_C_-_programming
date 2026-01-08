@@ -26,6 +26,27 @@ int main() {
     for(int x : l){
         cout << x << " ";
     }
-
+    l.pop_back();
+    cout << endl;
+    for(int x : l){
+        cout << x << " ";
+    }
+    l.pop_front();
+    
+    cout << endl;
+    for(int x : l){
+        cout << x << " ";
+    }
+    l.erase(next(l.begin(),1));
+    cout << endl;
+    for(int x : l){
+        cout << x << " ";
+    }
+    
+    l.erase(next(l.begin(),2), next(l.begin(), 4));
+    cout << endl;
+    for(int x : l){
+        cout << x << " ";
+    }
     return 0;
-}
+}             
