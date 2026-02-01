@@ -11,6 +11,7 @@ int main(){
     for(int i =0; i<n; i++){
         cin >> A[i];
     }
+
     for(int i = 0; i<n; i++){
         cin >> B[i] ;
     }
@@ -18,13 +19,15 @@ int main(){
     for(int i : B){
         C.push_back(i);
     }
+    
     for(int i : A){
         C.push_back(i);
     }
 
     for(int i: C){
-        cout << i << " ";
+        cout << i << "";
     }
+    
     return 0;
 }
 
