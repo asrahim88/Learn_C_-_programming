@@ -40,6 +40,7 @@ int main() {
     bfsTraversal(src);
     if(visitedNode[dest] == true){
         cout << "Yes\n";
+    }else {
         cout << "No\n";
     }
     return 0;
