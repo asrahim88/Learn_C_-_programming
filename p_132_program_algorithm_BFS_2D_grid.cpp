@@ -31,8 +31,10 @@ void bfs(int sourceI, int sourceJ){
             int childI = parentSourceI + movement[i].first;
             int childJ = parentSourceJ + movement[i].second;
 
-            if(valid(childI, childJ) && !visited[childI][childJ])
-                bfs(childI,childJ);
+            if(valid(childI, childJ) && !visited[childI][childJ]){
+                q.push({childI, childJ});
+                visited[childI][childJ] = true;
+            }
         }
     }   
 }
