@@ -19,7 +19,7 @@ void bfs(int src){
                 visitedNode[child] = true;
         }
     }
-}
+} 
 int main() {
     int n, e;
     cin >> n >> e;
