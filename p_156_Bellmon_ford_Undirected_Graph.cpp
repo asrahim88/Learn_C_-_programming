@@ -36,12 +36,16 @@ void bellMonFord(){
 
         if(distanceArray[a] != INT_MAX && distanceArray[a]+ c <distanceArray[b]){
             flag = true;
+            break;
         }
     }
     if(flag)
         cout << "Negative Weighted Cycle Detected" << endl;
-    else
-        cout << "No Cycle Detected";
+    else{
+        for(int i=0; i<n; i++){
+            cout << i << " -> " << distanceArray[i] << endl;
+        }
+    }
 }
 int main() {
     cin >> n >> e;
