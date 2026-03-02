@@ -16,7 +16,7 @@ int distanceArray[150];
 int n, e;
 void bellMonFord(){
     for(int i =0; i<n-1; i++){
-            for(Edge ed: EdgeList){
+        for(Edge ed: EdgeList){
             int a, b, c;
             a = ed.a;
             b = ed.b;
@@ -27,6 +27,21 @@ void bellMonFord(){
             }
         }
     }
+    bool flag = false;
+    for(Edge ed: EdgeList){
+        int a, b, c;
+        a = ed.a;
+        b = ed.b;
+        c = ed.c;
+
+        if(distanceArray[a] != INT_MAX && distanceArray[a]+ c <distanceArray[b]){
+            flag = true;
+        }
+    }
+    if(flag)
+        cout << "Negative Weighted Cycle Detected" << endl;
+    else
+        cout << "No Cycle Detected";
 }
 int main() {
     cin >> n >> e;
@@ -42,9 +57,5 @@ int main() {
     }
     distanceArray[0] = 0;
     bellMonFord();
-
-    for(int i=0; i<n; i++){
-        cout << i << " -> " << distanceArray[i] << endl;
-    }
     return 0;
 }
