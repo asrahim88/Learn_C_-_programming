@@ -1,16 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-int sum = 0;
-void printNumber(int n){
-    if(n>5)
-        return;
-    sum +=n;
-    cout << n << " " << sum << " " <<endl;
-    printNumber(n+1);
 
+int printsum(int num){
+    if(num > 5)
+        return 0;
+    return num + printsum(num + 1);
 }
 
 int main() {
-    printNumber(1);
+    cout << printsum(1) << endl;
     return 0;
 }
