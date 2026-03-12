@@ -14,7 +14,7 @@ long long int fib(long long int n){
 int main() {
     int n;
     cin >> n;
-
+    memset(storeValue, -1, sizeof(storeValue));
     cout << fib(n) << endl;
     return 0;
 }
