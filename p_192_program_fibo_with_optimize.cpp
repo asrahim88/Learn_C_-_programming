@@ -6,6 +6,8 @@ long long int storeValue[150];
 long long int fib(long long int n){
     if(n<2)
         return n;
+    if(storeValue[n] !=-1)
+        return storeValue[n];
     storeValue[n] = fib(n-1) + fib(n-2);
     return storeValue[n];
 }
