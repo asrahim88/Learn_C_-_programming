@@ -2,21 +2,22 @@
 using namespace std;
 
 int main() {
-    int N;
-    cin >> N;
-    vector<int> v(N);
-    for(int i =0; i<N; i++){
-        cin >> v[i];
+    int n;
+    cin>> n;
+    vector<int> v;
+    for(int i=0; i<n; i++)
+    {
+        int x;
+        cin >> x;
+        if(x <0)
+            v.push_back(2);
+        else if(x == 0)
+            v.push_back(x);
+        else
+            v.push_back(1);
     }
-    for(int i = 0; i<N; i++){
-        if(v[i]>1){
-            v[i] = 1;
-        }else if(v[i]<0){
-            v[i] = 2;
-        }
-    }
-    for(int i:v){
+
+    for(int i : v)
         cout << i << " ";
-    }
     return 0;
 }
